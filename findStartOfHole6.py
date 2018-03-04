@@ -55,6 +55,9 @@ while vid.get(1) < vid.get(7):
         #print('hole began on frame ' + str(int(vid.get(1))) + ' (confidence:' + str(maxVal1)+')')
         cv2.imwrite('zframe_'+str(int(vid.get(1)))+'state0_1.jpg',last_frame)
         cv2.imwrite('zframe_'+str(int(vid.get(1)))+'state0_2.jpg',frame)
+        cv2.imshow('star',frame)
+        cv2.waitKey()
+        cv2.destroyAllWindows()
         
         
     if vid.get(1)/vid.get(7)*100-percentDone >= 1:
